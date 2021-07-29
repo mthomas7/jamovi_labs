@@ -1563,12 +1563,12 @@ div.tocify {
 </div>
 
 
-<p>In this lab, you’ll investigate the probability distribution that is most central to statistics: the normal distribution. If you are confident that your data are nearly normal, that opens the door to many powerful statistical methods. Here we’ll use the graphical tools of Jamovi to assess the normality of our data and also learn how to generate random numbers from a normal distribution. We’ll also discover a little about <code>R</code>, the language Jamovi is built on.</p>
+<p>In this lab, you’ll investigate the probability distribution that is most central to statistics: the normal distribution. If you are confident that your data are nearly normal, that opens the door to many powerful statistical methods. Here we’ll use the graphical tools of jamovi to assess the normality of our data and also learn how to generate random numbers from a normal distribution. We’ll also discover a little about <code>R</code>, the language jamovi is built on.</p>
 <div id="getting-started" class="section level2">
 <h2>Getting Started</h2>
 <div id="load-module" class="section level3">
 <h3>Load module</h3>
-<p>In this lab, we will use the <code>distrACTION</code> module in Jamovi, which contains information on distributions. Click the plus button at the top right part of the screen, and add the distrACTION module to Jamovi. When you do this, you will see a new icon in the top bar.</p>
+<p>In this lab, we will use the <code>distrACTION</code> module in jamovi, which contains information on distributions. Click the plus button at the top right part of the screen, and add the distrACTION module to jamovi. When you do this, you will see a new icon in the top bar.</p>
 </div>
 <div id="the-data" class="section level3">
 <h3>The data</h3>
@@ -1603,7 +1603,7 @@ You can verify this by creating a frequency histogram of the same variable in th
 <div id="evaluating-the-normal-distribution" class="section level2">
 <h2>Evaluating the normal distribution</h2>
 <p>Eyeballing the shape of the histogram is one way to determine if the data appear to be nearly normally distributed, but it can be frustrating to decide just how close the histogram is to the curve. An alternative approach involves constructing a normal probability plot, also called a normal Q-Q plot for “quantile-quantile”.</p>
-<p>Again within the <code>Exploration</code> section, open the <code>plots</code> menu and check the <code>Q-Q</code> box to have Jamovi generate the Q-Q plot for this data.</p>
+<p>Again within the <code>Exploration</code> section, open the <code>plots</code> menu and check the <code>Q-Q</code> box to have jamovi generate the Q-Q plot for this data.</p>
 <p>The x-axis values correspond to the quantiles of a theoretically normal curve with mean 0 and standard deviation 1 (i.e., the standard normal distribution). The y-axis values correspond to the quantiles of the original unstandardized sample data. However, even if we were to standardize the sample data values, the Q-Q plot would look identical. A data set that is nearly normal will result in a probability plot where the points closely follow a diagonal line. Any deviations from normality leads to deviations of these points from that line.</p>
 <p>The plot for Dairy Queen’s calories from fat shows points that tend to follow the line but with some errant points towards the upper tail. You’re left with the same problem that we encountered with the histogram above: how close is close enough?</p>
 <p>A useful way to address this question is to rephrase it as: what do probability plots look like for data that I <em>know</em> came from a normal distribution?</p>
@@ -1623,7 +1623,7 @@ You can verify this by creating a frequency histogram of the same variable in th
 <h2>Normal probabilities</h2>
 <p>Okay, so now you have a slew of tools to judge whether or not a variable is normally distributed. Why should you care?</p>
 <p>It turns out that statisticians know a lot about the normal distribution. Once you decide that a random variable is approximately normal, you can answer all sorts of questions about that variable related to probability. Take, for example, the question of, “What is the probability that a randomly chosen Dairy Queen product has more than 600 calories from fat?”</p>
-<p>If we assume that the calories from fat from Dairy Queen’s menu are normally distributed (a very close approximation is also okay), we can find this probability by calculating a Z score and consulting a Z table (also called a normal probability table). In JASP, this is done in the <code>Show Distributions</code> section of the Normal menu. Within this menu, make sure parameters is set to <span class="math inline">\(\mu, \sigma\)</span>, and mean and standard deviation are correct, then check the <code>Probability</code> box under <code>Highlight</code>. Select “from 0 to <span class="math inline">\(\infty\)</span>”, then chance the 0 to 600.</p>
+<p>If we assume that the calories from fat from Dairy Queen’s menu are normally distributed (a very close approximation is also okay), we can find this probability by calculating a Z score and consulting a Z table (also called a normal probability table). In jamovi, this is done in the <code>Compute probability</code> section of the Normal menu. Within this menu, make sure the mean and standard deviation are correct, then check the <code>Compute probability</code> box. Select the third button and set x1 to 0 and x2 to 600.</p>
 <p>Assuming a normal distribution has allowed us to calculate a theoretical probability. If we want to calculate the probability empirically, we need to determine how many observations fall above 600. We could do this by creating a new variable which is 0 or 1 depending on whether <code>cal_fat</code> is greater than 600, then take the mean of this column.</p>
 <p>Although the probabilities are not exactly the same, they are reasonably close. The closer that your distribution is to being normal, the more accurate the theoretical probabilities will be.</p>
 <ol start="6" style="list-style-type: decimal">
